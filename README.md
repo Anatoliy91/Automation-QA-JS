@@ -1,2 +1,7 @@
-# Automation-QA-JS
-2 Homework
+# Anatoliy Dubina
+## Automation-QA-JS
+
+Linkedin
+https://www.linkedin.com/in/anatolii-dubina-31972ab3/
+
+
