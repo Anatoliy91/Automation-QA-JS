@@ -1,15 +1,16 @@
-//Створити функцію partialReverse яка отримує масив і повертає масив у якому всі елементи крім 
-//першого і останнього мають зворотній порядок.
-
-
-
 function partialReverse(arr) {
-    if (arr.length < 2) {
+    if (arr.length < 3) {
         return arr;
     }
     for (let i = 1; i < arr.length - 1; i++) {
-        arr[i] = arr[i].toString().split('').reverse().join('');
+        arr[i] = reverseElement(arr[i]);
     }
 
     return arr;
+}
+function reverseElement(element) {
+    if (typeof element === 'string') {
+        return element.split('').reverse().join('');
+    }
+    return element;
 }
