@@ -1,10 +1,8 @@
-let mergedArray = arr1.concat(arr2);
-    
-// Проверяем наличие дубликатов в объединенном массиве
-let set = new Set(mergedArray);
-if (set.size !== mergedArray.length) {
-    return null;
+function glueArrays(arr1, arr2) {
+    const mergedArray = Array.from(new Set([...arr1, ...arr2]));
+    if (mergedArray.length === arr1.length + arr2.length) {
+        return mergedArray;
+    } else {
+        return null;
+    }
 }
-
-// Если дубликатов нет, возвращаем объединенный массив
-return mergedArray;

@@ -3,9 +3,13 @@
 
 
 
-function reserver(array) {
-    let reserved= [];
-    let array = [];
-    reserved = array.reserve();
-    return reserved;
+function partialReverse(arr) {
+    if (arr.length < 2) {
+        return arr;
+    }
+    for (let i = 1; i < arr.length - 1; i++) {
+        arr[i] = arr[i].toString().split('').reverse().join('');
+    }
+
+    return arr;
 }
