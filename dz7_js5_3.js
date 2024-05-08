@@ -1,16 +1,10 @@
 function partialReverse(arr) {
-    if (arr.length < 3) {
+    if (arr.length <= 2) {
         return arr;
     }
-    for (let i = 1; i < arr.length - 1; i++) {
-        arr[i] = reverseElement(arr[i]);
-    }
 
-    return arr;
-}
-function reverseElement(element) {
-    if (typeof element === 'string') {
-        return element.split('').reverse().join('');
-    }
-    return element;
+    const middle = arr.slice(1, -1);
+    middle.reverse();
+
+    return [arr[0], ...middle, arr[arr.length - 1]];
 }
