@@ -1,0 +1,23 @@
+function createRandomPromise() {
+    return new Promise((resolve, reject) => {
+        const randomTime = Math.floor(Math.random() * 5000) + 1000; // Випадковий час від 1 до 5 секунд
+        const shouldSucceed = Math.random() > 0.5; // Випадковий результат (успішний чи ні)
+
+        setTimeout(() => {
+            if (shouldSucceed) {
+                resolve('Random Success');
+            } else {
+                reject('Random Error');
+            }
+        }, randomTime);
+    });
+}
+
+// Приклад використання
+createRandomPromise()
+    .then((message) => {
+        console.log('Promise resolved:', message);
+    })
+    .catch((error) => {
+        console.log('Promise rejected:', error);
+    });
